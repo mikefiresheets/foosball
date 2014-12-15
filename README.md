@@ -43,7 +43,7 @@ The app is configured to use SQLite in the dev environment *(and everywhere else
 and again I'm just using the version of SQLite that came with Yosemite, version
 `3.7.13`. To set up the database run
 
-```base
+```bash
 bin/bundle exec rake db:migrate
 ```
 
@@ -59,7 +59,7 @@ and you'll get a built-in Ruby web server at `localhost:3000`.
 
 Tests are run through a Rake task with
 
-```sh
+```bash
 bin/bundle exec rake test
 
 # or simply

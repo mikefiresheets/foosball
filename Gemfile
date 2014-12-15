@@ -6,7 +6,10 @@ gem 'rails', '4.2.0.rc3'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3'
 # Use SCSS for stylesheets
-gem 'sass-rails', '~> 5.0'
+#   require this version because of bugs with Sprockets > 2.12
+gem 'sass-rails', '4.0.4'
+# Use Compass for SASS
+gem 'compass-rails', '~> 2.0.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
