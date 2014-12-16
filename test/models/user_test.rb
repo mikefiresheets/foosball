@@ -6,7 +6,7 @@ class UserTest < ActiveSupport::TestCase
   end
 
   test "user should be valid" do
-    assert @user.valid?, @users.errors.full_messages.join(' ')
+    assert @user.valid?, @user.errors.full_messages.join(' ')
   end
 
   test "name should be present" do
