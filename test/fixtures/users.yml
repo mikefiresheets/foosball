@@ -1,11 +1,36 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-one:
-  first: MyString
-  last: MyString
-  email: MyString
+test:
+  first: Test
+  last: Test
+  email: test@example.com
 
-two:
-  first: MyString
-  last: MyString
-  email: MyString
+mike:
+  first: Mike
+  last: Firesheets
+  email: mike@example.com
+
+noah:
+  first: Noah
+  last: Bass
+  email: noah@example.com
+
+luke:
+  first: Luke
+  last: Moderwell
+  email: luke@example.com
+
+chris:
+  first: Chris
+  last: Costanza
+  email: chris@example.com
+
+joshua:
+  first: Joshua
+  last: Johnson
+  email: joshua@example.com
+
+jason:
+  first: Jason
+  last: Hauer
+  email: jason@example.com
