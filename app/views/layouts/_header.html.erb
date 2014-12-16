@@ -12,15 +12,16 @@
       <section class="top-bar-section">
         <!-- Right Nav Section -->
         <ul class="right">
-          <li class="active"><%= link_to 'Test', '#' %></li>
+          <li><%= nav_link_to 'Home', root_path, {}, { wrapper: 'li' } %></li>
+          <li><%= nav_link_to 'Test', '#', {}, { wrapper: 'li' } %></li>
           <li class="has-dropdown">
-            <%= link_to "Teams", '#' %>
+            <%= link_to 'Teams', '#' %>
             <ul class="dropdown">
-              <li><%= link_to "Randomize Teams", '#' %></li>
-              <li><%= link_to "Show Teams", '#' %></li>
+              <li><%= nav_link_to 'Randomize Teams', '#', {}, { wrapper: 'li' } %></li>
+              <li><%= nav_link_to 'Show Teams', '#', {}, { wrapper: 'li' } %></li>
             </ul>
           </li>
-          <li><%= link_to "Players", '#' %></li>
+          <li><%= nav_link_to 'Players', '#', {}, { wrapper: 'li' } %></li>
         </ul>
       </section>
     </nav>
