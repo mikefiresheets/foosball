@@ -12,8 +12,21 @@
   </head>
 
   <body>
+    <%= render 'layouts/header' %>
 
-    <%= yield %>
+    <div class="row">
+      <div class="small-12 small-centered columns">
+        <%= yield %>
+      </div>
+    </div>
+
+    <%= render 'layouts/footer' %>
+
+    <div class="row">
+      <div class="small-12 columns">
+        <%= debug(params) if Rails.env.development? %>
+      </div>
+    </div>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   </body>
 </html>
