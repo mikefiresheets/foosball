@@ -9,13 +9,17 @@ class UserTest < ActiveSupport::TestCase
     assert @user.valid?, @user.errors.full_messages.join(' ')
   end
 
-  test "name should be present" do
+  test "first and last names should be present" do
     @user.first = '  '
     assert_not @user.valid?
     @user.first = 'Test'
     assert @user.valid?
     @user.last = '  '
     assert_not @user.valid?
+  end
+
+  test "name property should be present" do
+    assert_equal @user.name, "#{@user.first} #{@user.last}"
   end
 
   test "name should not be too long" do
