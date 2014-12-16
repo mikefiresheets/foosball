@@ -10,6 +10,8 @@ gem 'sqlite3'
 gem 'sass-rails', '4.0.4'
 # Use Compass for SASS
 gem 'compass-rails', '~> 2.0.0'
+# Use Foundation for layout & widgets
+gem 'foundation-rails'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
