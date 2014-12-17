@@ -3,6 +3,28 @@
   bottom: 0;
 }
 
+#error_explanation {
+  ul {
+    list-style-type: initial;
+    margin-left: 3rem;
+    color: $alert-color;
+  }
+}
+
+.field_with_errors {
+  label, input {
+    border-color: $alert-color;
+  }
+
+  label {
+    background-color: lighten($alert-color, 20%);
+  }
+
+  input {
+    color: $alert-color;
+  }
+}
+
 #debug_dump {
   margin-top: rem-calc(48);
 
