@@ -13,4 +13,9 @@ class ActiveSupport::TestCase
   setup do
     @base_title = Rails.application.class.parent_name
   end
+
+  # Returns true if a test user is logged in.
+  def is_logged_in?
+    !session[:user_id].nil?
+  end
 end

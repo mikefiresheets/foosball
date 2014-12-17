@@ -4,33 +4,40 @@ test:
   first: Test
   last: Test
   email: test@example.com
+  password_digest: <%= User.digest('password') %>
 
 mike:
   first: Mike
   last: Firesheets
   email: mike@example.com
+  password_digest: <%= User.digest('password') %>
 
 noah:
   first: Noah
   last: Bass
   email: noah@example.com
+  password_digest: <%= User.digest('password') %>
 
 luke:
   first: Luke
   last: Moderwell
   email: luke@example.com
+  password_digest: <%= User.digest('password') %>
 
 chris:
   first: Chris
   last: Costanza
   email: chris@example.com
+  password_digest: <%= User.digest('password') %>
 
 joshua:
   first: Joshua
   last: Johnson
   email: joshua@example.com
+  password_digest: <%= User.digest('password') %>
 
 jason:
   first: Jason
   last: Hauer
   email: jason@example.com
+  password_digest: <%= User.digest('password') %>

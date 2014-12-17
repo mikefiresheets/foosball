@@ -1,2 +1,42 @@
-<h1>Sessions#new</h1>
-<p>Find me in app/views/sessions/new.html.erb</p>
+<% provide :title, 'Log In' %>
+<div class="row">
+  <div class="small-8 small-centered columns">
+    <%= form_for :session, url: login_path, html: { 'data-abide' => true } do |f| %>
+      <fieldset class="radius">
+        <legend>Log In</legend>
+        <div class="row">
+          <div class="small-10 columns small-centered">
+            <div class="input-wrapper">
+              <div class="row collapse">
+                <div class="small-3 columns">
+                  <%= f.label :email, class: 'prefix' %>
+                </div>
+                <div class="small-9 end columns">
+                  <%= f.text_field :email %>
+                  <small class="error">A valid email address is required.</small>
+                </div>
+              </div>
+            </div>
+            <div class="input-wrapper">
+              <div class="row collapse">
+                <div class="small-3 columns">
+                  <%= f.label :password, class: 'prefix' %>
+                </div>
+                <div class="small-9 end columns">
+                  <%= f.password_field :password %>
+                  <small class="error">A password is required.</small>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="small-12 columns">
+                <%= f.submit 'Log In', class: 'button small' %>
+                <p id="signup_link" class="right">New User? <%= link_to 'Create an Account', signup_path %></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    <% end %>
+  </div>
+</div>

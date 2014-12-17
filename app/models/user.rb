@@ -14,10 +14,19 @@ class User < ActiveRecord::Base
   validates :last, presence: true, length: { maximum: 50 }
   validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  validates_length_of :password, minimum: 7, too_short: 'Please enter at least 7 characters.'
+  validates :password, length: { minimum: 7, allow_nil: true },
+                       confirmation: true
 
   # Virtual property
   def name
     @name ||= "#{first} #{last}"
+  end
+
+  # Class methods
+  class << self
+    def digest(string)
+      cost = ActiveModel::SecurePassword.min_cost ? BCrypt::Engine::MIN_COST : BCrypt::Engine.cost
+      BCrypt::Password.create(string, cost: cost)
+    end
   end
 end
