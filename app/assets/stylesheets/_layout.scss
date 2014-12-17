@@ -1,6 +1,14 @@
-.debug_dump {
-  clear: both;
-  float: left;
-  width: 100%;
+.action-links {
+  position: absolute;
+  bottom: 0;
+}
+
+#debug_dump {
   margin-top: rem-calc(48);
+
+  .debug_dump {
+    clear: both;
+    float: left;
+    width: 100%;
+  }
 }

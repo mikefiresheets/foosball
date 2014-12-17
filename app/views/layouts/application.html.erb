@@ -16,17 +16,23 @@
 
     <div class="row">
       <div class="small-12 small-centered columns">
+        <% flash.each do |message_type, message| %>
+          <%= content_tag(:div, message, class: "alert-box radius #{message_type}", html: { 'data-alert' => true }) %>
+        <% end %>
+
         <%= yield %>
       </div>
     </div>
 
     <%= render 'layouts/footer' %>
 
-    <div class="row">
-      <div class="small-12 columns">
-        <%= debug(params) if Rails.env.development? %>
+    <% if Rails.env.development? %>
+    <div id="debug_dump" class="row">
+      <div class="small-12 columns panel radius">
+        <%= debug(params) %>
       </div>
     </div>
+    <% end %>
     <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
   </body>
 </html>

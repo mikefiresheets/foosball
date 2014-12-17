@@ -1,3 +1,26 @@
 <% provide :title, @user.name %>
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="row">
+  <div class="small-12 columns">
+    <header>
+      <h1>Single Player View</h1>
+    </header>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="small-8 small-centered columns panel radius">
+    <div class="row" data-equalizer>
+      <div class="small-4 columns text-center" data-equalizer-watch>
+        <%= gravatar_for @user, { size: 200 } %>
+      </div>
+      <div class="small-8 columns" data-equalizer-watch>
+        <p><strong>Name:</strong> <%= @user.name %></p>
+        <p><strong>Email:</strong> <%= @user.email %></p>
+        <div class="action-links">
+          <%= link_to 'Edit', edit_user_path(@user) %> |
+          <%= link_to 'Back', users_path %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
