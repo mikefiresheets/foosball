@@ -22,7 +22,7 @@ class UsersControllerTest < ActionController::TestCase
       post :create, user: { first: @user.first, last: @user.last, email: @user.email }
     end
 
-    assert_redirected_to user_path(assigns(:player))
+    assert_redirected_to user_path(assigns(:user))
   end
 
   test "should show user" do
