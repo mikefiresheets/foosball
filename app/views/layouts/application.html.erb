@@ -15,10 +15,14 @@
     <%= render 'layouts/header' %>
 
     <div class="row">
-      <div class="small-12 small-centered columns">
+      <div id="content" class="small-12 columns">
+      <% if !flash.empty? %>
+        <div id="flash_content" class="row">
         <% flash.each do |message_type, message| %>
-          <%= content_tag(:div, message, class: "alert-box radius #{message_type}", html: { 'data-alert' => true }) %>
+          <%= content_tag(:div, message, class: "small-7 small-centered text-center columns alert-box #{message_type}", html: { 'data-alert' => true }) %>
         <% end %>
+        </div>
+      <% end %>
 
         <%= yield %>
       </div>
