@@ -1,0 +1,71 @@
+<%= form_for @user, html: { 'data-abide' => true } do |f| %>
+  <%= render 'shared/error_messages', object: f.object %>
+
+  <fieldset class="radius">
+    <legend>Sign Up</legend>
+    <div class="row">
+      <div class="small-10 columns small-centered">
+        <div class="input-wrapper">
+          <div class="row collapse">
+            <div class="small-3 columns">
+              <%= f.label :first, class: 'prefix' %>
+            </div>
+            <div class="small-9 end columns">
+              <%= f.text_field :first, required: true %>
+              <small class="error">First name is required.</small>
+            </div>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <div class="row collapse">
+            <div class="small-3 columns">
+              <%= f.label :last, class: 'prefix' %>
+            </div>
+            <div class="small-9 end columns">
+              <%= f.text_field :last, required: true %>
+              <small class="error">Last name is required.</small>
+            </div>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <div class="row collapse">
+            <div class="small-3 columns">
+              <%= f.label :email, class: 'prefix' %>
+            </div>
+            <div class="small-9 end columns">
+              <%= f.text_field :email %>
+              <small class="error">A valid email address is required.</small>
+            </div>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <div class="row collapse">
+            <div class="small-3 columns">
+              <%= f.label :password, class: 'prefix' %>
+            </div>
+            <div class="small-9 end columns">
+              <%= f.password_field :password %>
+              <small class="error">A password is required.</small>
+            </div>
+          </div>
+        </div>
+        <div class="input-wrapper">
+          <div class="row collapse">
+            <div class="small-3 columns">
+              <%= f.label :password_confirmation, 'Confirmation', class: 'prefix' %>
+            </div>
+            <div class="small-9 end columns">
+              <%= f.password_field :password_confirmation %>
+              <small class="error">Passwords must match.</small>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-12 columns">
+            <%= f.submit class: 'button' %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+<% end %>
