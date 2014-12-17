@@ -15,11 +15,14 @@ class UsersControllerTest < ActionController::TestCase
   test "should get new" do
     get :new
     assert_response :success
+    assert_select 'title', full_title('Sign Up')
+    assert_not_nil assigns(:user)
   end
 
   test "should create user" do
     assert_difference('User.count') do
-      post :create, user: { first: @user.first, last: @user.last, email: @user.email }
+      post :create, user: { first: 'Controller', last: 'Test', email: 'tester@example.com',
+                            password: 'testing', password_confirmation: 'testing' }
     end
 
     assert_redirected_to user_path(assigns(:user))
@@ -28,11 +31,13 @@ class UsersControllerTest < ActionController::TestCase
   test "should show user" do
     get :show, id: @user
     assert_response :success
+    assert_select 'title', full_title(@user.name)
   end
 
   test "should get edit" do
     get :edit, id: @user
     assert_response :success
+    assert_select 'title', full_title(@user.name)
   end
 
   test "should update user" do
