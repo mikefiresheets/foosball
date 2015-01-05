@@ -33,7 +33,7 @@
               <%= f.label :email, class: 'prefix' %>
             </div>
             <div class="small-9 end columns">
-              <%= f.text_field :email %>
+              <%= f.email_field :email, required: true %>
               <small class="error">A valid email address is required.</small>
             </div>
           </div>
@@ -58,6 +58,14 @@
               <%= f.password_field :password_confirmation %>
               <small class="error">Passwords must match.</small>
             </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="small-3 text-right columns gravatar-edit">
+            <%= gravatar_for @user %>
+          </div>
+          <div class="small-9 columns">
+            <a href="http://gravatar.com/emails" target=_blank>change</a>
           </div>
         </div>
         <div class="row">
