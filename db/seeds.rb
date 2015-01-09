@@ -11,7 +11,9 @@ User.create!(first: "Administrator",
              email: "admin@example.org",
              password:              "administrator",
              password_confirmation: "administrator",
-             admin: true)
+             admin: true,
+             activated: true,
+             activated_at: Time.zone.now)
 
 # Some sample users
 99.times do |n|
@@ -20,5 +22,7 @@ User.create!(first: "Administrator",
                last:  Faker::Name.last_name,
                email: Faker::Internet.safe_email,
                password:              password,
-               password_confirmation: password)
+               password_confirmation: password,
+               activated:    true,
+               activated_at: Time.zone.now)
 end

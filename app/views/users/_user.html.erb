@@ -10,6 +10,7 @@
           <br>
           <%= user.email %>
         </p>
+        <p><strong>Active:</strong> <%= user.activated %></p>
       </div>
       <div class="small-1 column text-right" >
         <% if current_user.admin? && !current_user?(user) %>

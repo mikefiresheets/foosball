@@ -16,6 +16,7 @@
       <div class="small-8 columns" data-equalizer-watch>
         <p><strong>Name:</strong> <%= @user.name %></p>
         <p><strong>Email:</strong> <%= @user.email %></p>
+        <p><strong>Active:</strong> <%= @user.activated %></p>
         <div class="action-links">
           <%= link_to 'Edit', edit_user_path(@user) %> |
           <%= link_to 'Back', users_path %>

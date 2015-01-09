@@ -5,6 +5,8 @@ test:
   last: Test
   email: test@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 admin:
   admin: true
@@ -12,42 +14,56 @@ admin:
   last: User
   email: admin@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 mike:
   first: Mike
   last: Firesheets
   email: mike@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 noah:
   first: Noah
   last: Bass
   email: noah@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 luke:
   first: Luke
   last: Moderwell
   email: luke@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 chris:
   first: Chris
   last: Costanza
   email: chris@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 joshua:
   first: Joshua
   last: Johnson
   email: joshua@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 jason:
   first: Jason
   last: Hauer
   email: jason@example.com
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 
 <% 30.times do |n| %>
 user_<%= n %>:
@@ -55,4 +71,6 @@ user_<%= n %>:
   last:  <%= "User #{n}" %>
   email: <%= "user-#{n}@example.com" %>
   password_digest: <%= User.digest('password') %>
+  activated: true
+  activated_at: <%= Time.zone.now %>
 <% end %>
