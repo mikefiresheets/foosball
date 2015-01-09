@@ -1,3 +1,20 @@
 <% provide :title, 'Users' %>
-<h1>Users#index</h1>
-<p>Find me in app/views/users/index.html.erb</p>
+<div class="row">
+  <div class="small-12 columns">
+    <header>
+      <h1>All Users</h1>
+    </header>
+    <hr>
+  </div>
+</div>
+<div class="row">
+  <div class="small-8 small-centered columns">
+    <%= will_paginate renderer: FoundationPagination::Rails %>
+  </div>
+</div>
+<%= render @users %>
+<div class="row">
+  <div class="small-8 small-centered columns">
+    <%= will_paginate renderer: FoundationPagination::Rails %>
+  </div>
+</div>

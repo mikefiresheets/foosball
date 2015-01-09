@@ -1,0 +1,16 @@
+<div class="row">
+  <div class="small-8 small-centered columns panel">
+    <div class="row" data-equalizer>
+      <div class="small-4 columns text-center" data-equalizer-watch>
+        <%= gravatar_for user, size: 50 %>
+      </div>
+      <div class="small-8 columns" data-equalizer-watch>
+        <p>
+          <%= link_to user.name, user %>
+          <br>
+          <%= user.email %>
+        </p>
+      </div>
+    </div>
+  </div>
+</div>

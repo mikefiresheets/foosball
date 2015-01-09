@@ -18,6 +18,9 @@ gem 'nav_lynx'
 gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
+# Nice pagination controls
+gem 'will_paginate', '~> 3.0.7'
+gem 'will_paginate-foundation', '~> 5.3.3'
 # See https://github.com/sstephenson/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -42,12 +45,13 @@ gem 'bcrypt', '~> 3.1.7'
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
-
   # Access an IRB console on exception pages or by using <%= console %> in views
   gem 'web-console', '~> 2.0'
-
-  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  # Spring speeds up development by keeping your application running in the background.
+  # Read more: https://github.com/rails/spring
   gem 'spring'
+  # Easily create db seeds for local testing
+  gem 'faker', '~> 1.4.3'
 end
 
 # From the rails tutorial https://www.railstutorial.org/book with modifications

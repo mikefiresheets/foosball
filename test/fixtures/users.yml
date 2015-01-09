@@ -41,3 +41,11 @@ jason:
   last: Hauer
   email: jason@example.com
   password_digest: <%= User.digest('password') %>
+
+<% 30.times do |n| %>
+user_<%= n %>:
+  first: <%= "Test #{n}" %>
+  last:  <%= "User #{n}" %>
+  email: <%= "user-#{n}@example.com" %>
+  password_digest: <%= User.digest('password') %>
+<% end %>
