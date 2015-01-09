@@ -3,4 +3,16 @@ class ApplicationController < ActionController::Base
   # For APIs, you may want to use :null_session instead.
   protect_from_forgery with: :exception
   include SessionsHelper
+
+  before_action :require_login
+
+  private
+
+    # Confirms a logged-in user for access.
+    def require_login
+      unless logged_in?
+        flash[:alert] = "You must log in to visit this page."
+        redirect_to login_url
+      end
+    end
 end
