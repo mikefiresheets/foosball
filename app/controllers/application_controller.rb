@@ -11,6 +11,7 @@ class ApplicationController < ActionController::Base
     # Confirms a logged-in user for access.
     def require_login
       unless logged_in?
+        store_location
         flash[:alert] = "You must log in to visit this page."
         redirect_to login_url
       end
