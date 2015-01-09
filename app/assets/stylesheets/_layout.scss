@@ -3,6 +3,21 @@
   bottom: 0;
 }
 
+.action-button {
+  i.large {
+    font-size: 3.25rem;
+    line-height: 3.25rem;
+  }
+  i.medium {
+    font-size: 2rem;
+    padding: 0 5px;
+  }
+  i.small {
+    font-size: 1.5rem;
+    padding: 0 5px;
+  }
+}
+
 #error_explanation {
   ul {
     list-style-type: initial;

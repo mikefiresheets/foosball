@@ -6,6 +6,13 @@ test:
   email: test@example.com
   password_digest: <%= User.digest('password') %>
 
+admin:
+  admin: true
+  first: Admin
+  last: User
+  email: admin@example.com
+  password_digest: <%= User.digest('password') %>
+
 mike:
   first: Mike
   last: Firesheets

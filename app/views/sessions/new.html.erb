@@ -12,7 +12,7 @@
                   <%= f.label :email, class: 'prefix' %>
                 </div>
                 <div class="small-9 end columns">
-                  <%= f.text_field :email %>
+                  <%= f.text_field :email, tabindex: 1 %>
                   <small class="error">A valid email address is required.</small>
                 </div>
               </div>
@@ -23,14 +23,14 @@
                   <%= f.label :password, class: 'prefix' %>
                 </div>
                 <div class="small-9 end columns">
-                  <%= f.password_field :password %>
+                  <%= f.password_field :password, tabindex: 2 %>
                   <small class="error">A password is required.</small>
                 </div>
               </div>
             </div>
             <div class="row collapse">
               <div class="small-6 columns">
-                <%= f.check_box :remember_me %>
+                <%= f.check_box :remember_me, tabindex: 4 %>
                 <%= f.label :remember_me, 'Remember me' %>
               </div>
               <div class="small-6 columns text-right">
@@ -39,8 +39,8 @@
             </div>
             <div class="row">
               <div class="small-12 columns">
-                <%= f.submit 'Log In', class: 'button small' %>
-                <p id="signup_link" class="right">New User? <%= link_to 'Create an Account', signup_path %></p>
+                <%= f.submit 'Log In', class: 'button small', tabindex: 3 %>
+                <p id="signup_link" class="right">New User? <%= link_to 'Create an Account', signup_path, tabindex: 5 %></p>
               </div>
             </div>
           </div>

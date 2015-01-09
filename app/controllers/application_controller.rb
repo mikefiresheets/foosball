@@ -6,6 +6,11 @@ class ApplicationController < ActionController::Base
 
   before_action :require_login
 
+  # Confirms an admin user.
+  def admin_user
+    redirect_to(root_url) unless current_user.admin?
+  end
+
   private
 
     # Confirms a logged-in user for access.

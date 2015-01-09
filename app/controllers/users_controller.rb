@@ -1,8 +1,9 @@
 class UsersController < ApplicationController
   skip_before_action :require_login, only: [:new, :create]
 
-  before_action :correct_user,   only: [:edit, :update, :destroy]
-  before_action :set_user,       only: [:show, :edit, :update, :destroy]
+  before_action :correct_user, only: [:edit, :update]
+  before_action :admin_user,   only: :destroy
+  before_action :set_user,     only: [:show, :edit, :update, :destroy]
 
   # GET /users
   # GET /users.json
@@ -62,7 +63,7 @@ class UsersController < ApplicationController
   def destroy
     @user.destroy
     respond_to do |format|
-      flash[:success] = 'User was successfully destroyed.'
+      flash[:success] = 'User was successfully removed.'
       format.html { redirect_to users_url }
       format.json { head :no_content }
     end

@@ -1,7 +1,7 @@
 <div class="row">
   <div class="small-8 small-centered columns panel">
     <div class="row" data-equalizer>
-      <div class="small-4 columns text-center" data-equalizer-watch>
+      <div class="small-3 columns text-center" data-equalizer-watch>
         <%= gravatar_for user, size: 50 %>
       </div>
       <div class="small-8 columns" data-equalizer-watch>
@@ -10,6 +10,13 @@
           <br>
           <%= user.email %>
         </p>
+      </div>
+      <div class="small-1 column text-right" >
+        <% if current_user.admin? && !current_user?(user) %>
+          <%= link_to user, class: 'action-button', method: :delete, data: { confirm: "You sure?" } do %>
+            <i class="fi-x-circle small"></i>
+          <% end %>
+        <% end %>
       </div>
     </div>
   </div>
