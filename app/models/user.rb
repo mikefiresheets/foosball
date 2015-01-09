@@ -17,8 +17,8 @@ class User < ActiveRecord::Base
   validates :last, presence: true, length: { maximum: 50 }
   validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX },
                     uniqueness: { case_sensitive: false }
-  validates :password, length: { minimum: 7, allow_nil: true },
-                       confirmation: true
+  validates :password, length: { minimum: 7 },
+                       confirmation: true, allow_blank: true
 
   # Virtual properties
   def name

@@ -44,7 +44,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        flash[:success] = 'User was successfully created.'
+        flash[:success] = 'User was successfully updated.'
         format.html { redirect_to @user }
         format.json { render :show, status: :ok, location: @user }
       else

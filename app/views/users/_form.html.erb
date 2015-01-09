@@ -60,6 +60,7 @@
             </div>
           </div>
         </div>
+      <% unless @user.email.nil? %>
         <div class="row">
           <div class="small-3 text-right columns gravatar-edit">
             <%= gravatar_for @user %>
@@ -68,6 +69,7 @@
             <a href="http://gravatar.com/emails" target=_blank>change</a>
           </div>
         </div>
+      <% end %>
         <div class="row">
           <div class="small-12 columns">
             <%= f.submit class: 'button small' %>
