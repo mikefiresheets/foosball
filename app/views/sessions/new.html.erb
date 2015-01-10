@@ -34,13 +34,13 @@
                 <%= f.label :remember_me, 'Remember me' %>
               </div>
               <div class="small-6 columns text-right">
-                Forgot password?
+                <%= link_to 'Forgot password?', '#', tabindex: 5 %>
               </div>
             </div>
             <div class="row">
               <div class="small-12 columns">
                 <%= f.submit 'Log In', class: 'button small', tabindex: 3 %>
-                <p id="signup_link" class="right">New User? <%= link_to 'Create an Account', signup_path, tabindex: 5 %></p>
+                <p id="signup_link" class="right">New User? <%= link_to 'Create an Account', signup_path, tabindex: 6 %></p>
               </div>
             </div>
           </div>
