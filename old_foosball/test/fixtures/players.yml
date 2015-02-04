@@ -1,0 +1,30 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+test:
+  first: Test
+  last: User
+  email: test@example.com
+
+mike:
+  first: Mike
+  last: Firesheets
+  email: mike@example.com
+  team: one
+
+noah:
+  first: Noah
+  last: Bass
+  email: noah@example.com
+  team: one
+
+chris:
+  first: Chris
+  last: Costanza
+  email: chris@example.com
+  team: two
+
+luke:
+  first: Luke
+  last: Moderwell
+  email: luke@example.com
+  team: two
